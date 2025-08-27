@@ -7,7 +7,7 @@
              version="1.0"
              desktopVersion="3.0">
     <Name>Spherical Image Viewer</Name>
-    <Description>Professional spherical camera image viewer</Description>
+    <Description>Professional spherical camera image viewer with AI detection capabilities</Description>
     <Image>Images\AddinDesktop32.png</Image>
     <Author>Your Name</Author>
     <Company>Your Company</Company>
@@ -33,7 +33,7 @@
       <controls>
         <button id="SphericalImageViewer_MainDockPane_ShowButton"
                 caption="Spherical Viewer"
-                className="UI.MainDockPane_ShowButton"
+                className="ViewModels.MainDockPane_ShowButton"
                 loadOnClick="true"
                 smallImage="Images\GenericButtonBlue16.png"
                 largeImage="Images\GenericButtonBlue32.png">
@@ -47,7 +47,7 @@
       <dockPanes>
         <dockPane id="SphericalImageViewer_MainDockPane"
                   caption="Spherical Image Viewer"
-                  className="UI.MainDockPaneViewModel"
+                  className="ViewModels.MainDockPaneViewModel"
                   dock="group"
                   dockWith="esri_core_contentsDockPane"
                   hasHelp="false">
