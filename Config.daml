@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="SphericalImageViewer.dll"
+        defaultNamespace="SphericalImageViewer"
+        xmlns="http://schemas.esri.com/DADF/2016">
+
+  <AddInInfo id="{12345678-1234-5678-9012-123456789ABC}"
+             version="1.0"
+             desktopVersion="3.0">
+    <Name>Spherical Image Viewer</Name>
+    <Description>Professional spherical camera image viewer</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Your Name</Author>
+    <Company>Your Company</Company>
+    <Date>8/26/2025</Date>
+  </AddInInfo>
+
+  <modules>
+    <insertModule id="SphericalImageViewer_Module"
+                  className="Module1"
+                  autoLoad="false"
+                  caption="Spherical Image Viewer Module">
+
+      <!-- Define the group that appears in ribbon -->
+      <groups>
+        <group id="SphericalImageViewer_Group1"
+               caption="Spherical Viewer"
+               appearsOnAddInTab="true">
+          <button refID="SphericalImageViewer_MainDockPane_ShowButton" size="large" />
+        </group>
+      </groups>
+
+      <!-- Define the button -->
+      <controls>
+        <button id="SphericalImageViewer_MainDockPane_ShowButton"
+                caption="Spherical Viewer"
+                className="UI.MainDockPane_ShowButton"
+                loadOnClick="true"
+                smallImage="Images\GenericButtonBlue16.png"
+                largeImage="Images\GenericButtonBlue32.png">
+          <tooltip heading="Spherical Image Viewer">
+            Open the spherical camera image viewer with AI detection capabilities
+          </tooltip>
+        </button>
+      </controls>
+
+      <!-- Define the dockpane -->
+      <dockPanes>
+        <dockPane id="SphericalImageViewer_MainDockPane"
+                  caption="Spherical Image Viewer"
+                  className="UI.MainDockPaneViewModel"
+                  dock="group"
+                  dockWith="esri_core_contentsDockPane"
+                  hasHelp="false">
+          <content className="UI.MainDockPaneView" />
+        </dockPane>
+      </dockPanes>
+
+    </insertModule>
+  </modules>
+</ArcGIS>
